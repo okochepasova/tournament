@@ -14,7 +14,11 @@ player with the same number of wins, or as close as possible.
 -------------------------------------------------------------------------------
     Installation
 -------------------------------------------------------------------------------
- 
+Make sure you have Git, Vagrant, VirtualBox and Python installed.
+
+Right click on the empty space inside your folder and chose "Git Bash Here".
+Start up the Virtual Machine, change directory to "vagrant/tournament", and 
+type in "python tournament_test.py".
 
 -------------------------------------------------------------------------------
     Copyright
