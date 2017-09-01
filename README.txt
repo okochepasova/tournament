@@ -16,14 +16,27 @@ player with the same number of wins, or as close as possible.
 -------------------------------------------------------------------------------
 Make sure you have Git, Vagrant, VirtualBox and Python installed.
 
-Right click on the empty space inside your folder and chose "Git Bash Here".
-Start up the Virtual Machine, change directory to "vagrant/tournament", and 
-run "psql" followed by "\i tournament.sql" to build and access the database. 
+Right click on the empty space inside your folder and choose "Git Bash Here". 
+Start up the Virtual Machine and change to the tournament directory.
+  $ vagrant up
+  $ vagrant ssh
+  ~$ cd /vagrant/tournament
 
-Type in "python tournament_test.py". You can rename your database by running 
-"\c tournament" while inside the psql interface.
+Please note that your path may differ. In that case, start at the vagrant 
+directory and use "ls" to view all available items. Search until you find the 
+correct path.
+
+Run PSQL. To create the database and connect to it, use the commands: 
+  vagrant => CREATE DATABASE tournament;
+  vagrant => \c tournament;
+  tournament => \i tournament.sql;
+  tournament =>
+Exit PSQL "\q".
+
+Type in "python tournament_test.py". In order to reset your database: enter 
+into PSQL and repeat steps 2 & 3 from above.
 
 -------------------------------------------------------------------------------
     Copyright
 -------------------------------------------------------------------------------
-
+The starter code was provided by Udacity. All changes where made by me.
