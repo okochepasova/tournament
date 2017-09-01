@@ -18,7 +18,10 @@ Make sure you have Git, Vagrant, VirtualBox and Python installed.
 
 Right click on the empty space inside your folder and chose "Git Bash Here".
 Start up the Virtual Machine, change directory to "vagrant/tournament", and 
-type in "python tournament_test.py".
+run "psql" followed by "\i tournament.sql" to build and access the database. 
+
+Type in "python tournament_test.py". You can rename your database by running 
+"\c tournament" while inside the psql interface.
 
 -------------------------------------------------------------------------------
     Copyright
