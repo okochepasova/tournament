@@ -23,7 +23,7 @@ def deleteMatches():
 
     # Body
     # https://www.postgresql.org/docs/9.3/static/sql-truncate.html
-    query = "TRUNCATE matches;"
+    query = "TRUNCATE matches CASCADE;"
     c.execute(query)
     db.commit()
 
@@ -37,7 +37,7 @@ def deletePlayers():
     db, c = connect()
 
     # Body
-    query = "TRUNCATE players;"
+    query = "TRUNCATE players CASCADE;"
     c.execute(query)
     db.commit()
 
@@ -122,8 +122,8 @@ def reportMatch(winner, loser):
 
     # Body
     if str(winner).isdigit() and str(loser).isdigit():
-        query = "INSERT INTO matches VALUES (%s);"
-        param = winner+', '+loser
+        query = "INSERT INTO matches VALUES (%s, %s);"
+        param = (winner, loser,)
         c.execute(query, param)
         db.commit()
 

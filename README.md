@@ -24,10 +24,9 @@ Please note that your path may differ. In that case, start at the vagrant
 directory and use `ls` to view all available items. Search until you find the 
 correct path.
 
-Run PSQL. To create the database and connect to it, use the commands: 
+Run PSQL. To create the database and connect to it, use the command: 
 ```
   vagrant => \i tournament.sql;
-  vagrant => \c tournament;
   tournament =>
 ```
 Exit PSQL `\q`.
