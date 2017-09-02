@@ -29,7 +29,7 @@ Run PSQL. To create the database and connect to it, use the command:
   vagrant => \i tournament.sql;
   tournament =>
 ```
-Exit PSQL `\q`.
+To connect to the database use `\c tournament;`. Exit PSQL `\q`.
 
 Type in `python tournament_test.py`. In order to reset your database: enter 
 into PSQL and repeat the steps from above.
