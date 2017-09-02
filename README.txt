@@ -27,14 +27,13 @@ directory and use "ls" to view all available items. Search until you find the
 correct path.
 
 Run PSQL. To create the database and connect to it, use the commands: 
-  vagrant => CREATE DATABASE tournament;
+  vagrant => \i tournament.sql;
   vagrant => \c tournament;
-  tournament => \i tournament.sql;
   tournament =>
 Exit PSQL "\q".
 
 Type in "python tournament_test.py". In order to reset your database: enter 
-into PSQL and repeat steps 2 & 3 from above.
+into PSQL and repeat the steps from above.
 
 -------------------------------------------------------------------------------
     Copyright
