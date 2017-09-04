@@ -23,7 +23,7 @@ def deleteMatches():
 
     # Body
     # https://www.postgresql.org/docs/9.3/static/sql-truncate.html
-    query = "TRUNCATE matches CASCADE;"
+    query = "TRUNCATE matches;"
     c.execute(query)
     db.commit()
 
@@ -37,7 +37,7 @@ def deletePlayers():
     db, c = connect()
 
     # Body
-    query = "TRUNCATE players CASCADE;"
+    query = "TRUNCATE players RESTART IDENTITY CASCADE;"
     c.execute(query)
     db.commit()
 
@@ -149,13 +149,8 @@ def swissPairings():
     # Variables
     record = playerStandings()
 
-    # Openinging
-    db, c = connect()
-
     # Body
     list = [(record[i][0], record[i][1], record[i+1][0], record[i+1][1])
             for i in range(0, len(record), 2)]
 
-    # Closing
-    db.close()
     return list

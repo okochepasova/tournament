@@ -34,5 +34,11 @@ To connect to the database use `\c tournament;`. Exit PSQL `\q`.
 Type in `python tournament_test.py`. In order to reset your database: enter 
 into PSQL and repeat the steps from above.
 
+If the following appears as the last line of output from tournament_test.py, 
+then everything has been set up correctly.
+```
+Success! All tests pass!
+```
+
 ## Copyright
 The starter code was provided by Udacity. All changes where made by me.
